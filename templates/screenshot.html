@@ -1,0 +1,155 @@
+$def with (url, img1, img2, img_diff, diff)
+
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="static/css/main.css">
+
+		<link rel="stylesheet" type="text/css" href="static/css/component.css" />
+
+        <script src="static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <div class="md-modal md-effect-16" id="modal-16">
+          <div class="md-content">
+            <h3><span class="glyphicon glyphicon-ok"></span> Page Saved as Good</h3>
+            <div>
+              <h4>Snapshot for <strong>January 13, 2015</strong></h4>
+              <ul>
+                <li><strong>URL:</strong> $url</li>
+                <li><strong>Next Test Run:</strong> February 13, 2014</li>
+              </ul>
+              <button class="md-close btn btn-default">Close me!</button>
+            </div>
+          </div>
+        </div><!-- /md-modal -->
+
+
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Pretty Sweet Visual Diff Tool</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Help</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix row-page-url">
+          <div class="col-md-9 url">
+            $url
+          </div>
+          <div class="col-md-3 buttons">
+            <button type="button" class="btn btn-success md-trigger" data-modal="modal-16"><span class="glyphicon glyphicon-ok"></span> Good</button>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#jira-panel"><span class="glyphicon glyphicon-ban-circle"></span> Bad</button>
+          </div>
+			</div>
+			<div class="row clearfix row-page-log">
+				<div class="col-md-12 column">
+          <span class="log-data">$diff%</span>
+          <span class="log-title">% Changed</span>
+				</div>
+				<!--<div class="col-md-4 column">
+          <span class="log-data">23,400</span>
+          <span class="log-title">Pixel Total</span>
+				</div>
+				<div class="col-md-4 column">
+          <span class="log-data">3,500</span>
+          <span class="log-title">Pixels Changed</span>
+				</div>-->
+			</div>
+      <div id="jira-panel" class="row clearfix row-page-jira collapse">
+        <div class="col-md-6 column">
+          <form role="form">
+            <div class="form-group">
+               <label for="exampleInputEmail1">Project</label><input type="email" class="form-control" id="exampleInputEmail1" />
+            </div>
+            <div class="form-group">
+               <label for="exampleInputEmail1">Issue Type</label><input type="email" class="form-control" id="exampleInputEmail1" />
+            </div>
+            <div class="form-group">
+               <label for="exampleInputPassword1">Summary</label><input type="password" class="form-control" id="exampleInputPassword1" />
+            </div>
+          </form>
+			  </div>
+        <div class="col-md-6 column">
+          <form role="form">
+            <div class="form-group">
+               <label for="exampleInputPassword1">Description</label>
+               <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Create Jira Ticket</button>
+            <button type="submit" class="btn btn-link">Cancel</button>
+          </form>
+        </div>
+      </div>
+			<div class="row clearfix row-page-output">
+				<div class="col-md-6 column side-left">
+          <span class="snapshot-heading">Past Snapshot</span>
+          <span class="snapshot-date">December 23, 2014</span>
+          <img class="snapshot-img col-xs-12" src="$img1">
+				</div>
+				<div class="col-md-6 column side-right">
+          <span class="snapshot-heading">Current Snapshot</span>
+          <span class="snapshot-date">January 13, 2015</span>
+<div class="snapshot-img-wrap">
+<img class="snapshot-img col-xs-12" src="$img2">
+<img class="snapshot-img col-xs-12 top-overlay-hover" src="$img_diff">
+</div>				
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    </div> <!-- /container -->
+<div class="md-overlay"></div><!-- the overlay element -->
+
+
+
+
+
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="static/js/vendor/bootstrap.min.js"></script>
+
+        <script src="static/js/main.js"></script>
+
+        <script src="static/js/classie.js"></script>
+		<script src="static/js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="static/js/cssParser.js"></script>
+		<script src="static/js/css-filters-polyfill.js"></script>
+
+    </body>
+</html>

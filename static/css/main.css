@@ -1,0 +1,143 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+/* ==========================================================================
+  Author's custom styles
+  ========================================================================== */
+
+html, body {
+ background: #e1e8f3;
+ color: #565656;
+ font-family: 'Source Sans Pro', 'sans-serif';
+ padding-bottom: 20px;
+}
+
+.navbar {
+ min-height: 60px;
+ margin-bottom: 0;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+ color: #fff;
+}
+
+.navbar-inverse {
+ background: #70a1dd;
+ border: none;
+}
+
+.navbar-inverse a.navbar-brand {
+ color: #FFF !important;
+ text-shadow: none !important;
+ font-size: 1.7em;
+ font-weight: 400;
+ padding: 18px;
+ padding-left: 0;
+}
+
+.row-page-url {
+ background: #53739c;
+ padding: 15px;
+}
+
+.row-page-url .url {
+ background: #4c6a90;
+ border-radius: 5px;
+ color: #fff;
+ font-size: 1.2em;
+ font-weight: 600;
+ padding: 5px 10px;
+}
+
+.row-page-url .buttons {
+ padding-right: 0;
+ text-align: right;
+}
+
+.row-page-url .buttons .btn {
+ font-size: 1.2em;
+ padding: 4px 20px;
+ margin-left: 10px;
+}
+
+.row-page-log {
+ background: #6081ab;
+ padding: 15px;
+}
+
+.row-page-log .column {
+ color: #fff;
+ text-align: center;
+}
+
+.row-page-log .column .log-data {
+ display: block;
+ font-size: 2.2em;
+}
+
+.row-page-log .column .log-title {
+ display: block;
+ color: #7de1a8;
+ font-size: 1.1em;
+ font-weight: 600;
+}
+
+.row-page-output {
+ background: #fff;
+ padding-bottom: 30px;
+}
+
+.row-page-output .side-left,
+.row-page-output .side-right {
+ padding-top: 15px;
+}
+
+.row-page-output .side-left {
+ border-right: 1px solid #d6d6d6;
+}
+
+.row-page-output .snapshot-heading {
+ display: block;
+ color: #929292;
+ text-transform: uppercase;
+ font-size: 0.9em;
+ font-weight: 600;
+}
+
+.row-page-output .snapshot-date {
+ display: block;
+ font-size: 1.4em;
+ margin-bottom: 15px;
+}
+
+.row-page-output .snapshot-img-wrap {
+ position:relative;
+}
+
+.row-page-output .snapshot-img-wrap:after {
+ content:'';
+   display:block;
+   clear: both;
+}
+
+.row-page-output .snapshot-img {
+ border: 1px solid #e5e5e5;
+}
+
+.row-page-output .snapshot-img.top-overlay-hover {
+ left: 0;
+ position: absolute;
+ top: 0;
+}
+
+.top-overlay-hover:hover {
+opacity: 0;
+}
+.row-page-jira {
+ background: #FFF;
+ border-bottom: 1px solid #d6d6d6;
+ border-left: 5px solid #ea8678;
+}
+
+.row-page-jira .column {
+ margin: 20px 0;
+}
